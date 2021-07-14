@@ -10,13 +10,14 @@ import android.widget.Toast
 class MainActivity2 : AppCompatActivity() {
     //creating instance of supportFragmentManager
     val fragment = supportFragmentManager
+    var count = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
 
         //add fragment
-        var count = 0
+
         val addButton = findViewById<Button>(R.id.addBtn)
         addButton.setOnClickListener {
             addFragment()
@@ -38,7 +39,7 @@ class MainActivity2 : AppCompatActivity() {
         val fragManager = supportFragmentManager
         fragManager.beginTransaction().add(
             R.id.fragment,
-            Fragment1.newInstance("", ""), null
+            Fragment1.newInstance(count.toString(), ""), null
         )
             .addToBackStack(null)
             .commit()
@@ -47,6 +48,7 @@ class MainActivity2 : AppCompatActivity() {
     //remove fragment function
     fun removeFragment() {
         fragment.popBackStack()
+        count--
     }
 }
 
