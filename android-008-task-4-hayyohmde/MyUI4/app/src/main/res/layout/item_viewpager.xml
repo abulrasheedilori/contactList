@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/viewPager_imageView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.363"
+        android:contentDescription="@string/pager_image_view"/>
+
+    <TextView
+        android:id="@+id/textView_yaay"
+        android:layout_width="71dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/montserrat_semibolditalic"
+        android:text="@string/yaay"
+        android:textColor="@color/status_white"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView_prof_msg"
+        app:layout_constraintEnd_toEndOf="@+id/viewPager_imageView"
+        app:layout_constraintStart_toStartOf="@+id/viewPager_imageView" />
+
+    <TextView
+        android:id="@+id/textView_prof_msg"
+        android:layout_width="286dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="148dp"
+        android:fontFamily="@font/montserrat_blackitalic"
+        android:text="@string/textview"
+        android:textAlignment="center"
+        android:textColor="@color/status_white"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="@+id/viewPager_imageView"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="@+id/viewPager_imageView"
+        app:layout_constraintTop_toTopOf="@+id/viewPager_imageView" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pro_card_dial"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginStart="50dp"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPager_imageView"
+        app:layout_constraintStart_toStartOf="@+id/viewPager_imageView">
+
+        <ImageView
+            android:id="@+id/imageView_dial"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_icon_tel"
+            android:contentDescription="@+id/imageView_dial" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pro_card_msg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPager_imageView"
+        app:layout_constraintEnd_toStartOf="@+id/pro_card_share"
+        app:layout_constraintStart_toEndOf="@+id/pro_card_dial">
+
+        <ImageView
+            android:id="@+id/imageView_msg"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_mail"
+            android:contentDescription="@string/pager_image_view" />
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pro_card_share"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="50dp"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPager_imageView"
+        app:layout_constraintEnd_toEndOf="@+id/viewPager_imageView">
+
+        <ImageView
+            android:id="@+id/imageView_share"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_share"
+            android:contentDescription="@+id/imageView_share"/>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/imageView_pen"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginTop="26dp"
+        app:srcCompat="@drawable/ic_pen_icon"
+        tools:layout_editor_absoluteX="360dp"
+        tools:layout_editor_absoluteY="194dp"
+        android:contentDescription="@string/image_pen"
+        app:layout_constraintTop_toTopOf="@id/viewPager_imageView"
+        app:layout_constraintEnd_toEndOf="@id/viewPager_imageView"/>
+
+    <View
+        android:id="@+id/view_pen_underline"
+        android:layout_width="20dp"
+        android:layout_height="3dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="4dp"
+        tools:layout_editor_absoluteX="342dp"
+        tools:layout_editor_absoluteY="233dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView_pen"
+        app:layout_constraintEnd_toEndOf="@id/viewPager_imageView"/>
+
+    <ImageView
+        android:id="@+id/flower_image"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView_yaay"
+        app:layout_constraintEnd_toEndOf="@+id/viewPager_imageView"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toEndOf="@+id/textView_yaay"
+        app:srcCompat="@drawable/celebration" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
