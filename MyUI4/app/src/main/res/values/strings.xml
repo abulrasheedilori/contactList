@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">MyUI4</string>
+    <string name="status_message">Good morning!</string>
+    <string name="love_icon_small">love_icon_small</string>
+    <string name="love_icon_medium">love_icon_medium</string>
+    <string name="love_icon_big">love_icon_big</string>
+    <string name="status_bell">status_bell</string>
+    <string name="_1">1</string>
+    <string name="search_icon">search_icon</string>
+    <string name="search_for_celebrants">Search for celebrants</string>
+    <string name="ilori_ayomide">Ilori Ayomide</string>
+    <string name="status_msg">Hello, friends, how are you doing today</string>
+    <string name="search_your_contact_here">search your contact here...</string>
+    <string name="home">Home</string>
+    <string name="gifts">gifts</string>
+    <string name="people">people</string>
+    <string name="profile_image">profile_image</string>
+    <string name="imagebutton_search">imageButton_search</string>
+    <string name="pager_image_view">pager image view</string>
+    <string name="textview">TextView</string>
+    <string name="yaay">Yaay!</string>
+    <string name="image_pen">image_pen</string>
+    <string name="_30_days_left">30 days left</string>
+</resources>
