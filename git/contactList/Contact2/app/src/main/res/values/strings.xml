@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Contact</string>
+    <string name="contact_list">Contact List</string>
+    <string name="profile_image">profile_image</string>
+    <string name="ilori_abdulrasheed">Ilori AbdulRasheed</string>
+    <string name="image_dial_icon">image_dial_icon</string>
+    <string name="_08058867077">08058867077</string>
+    <string name="image_video_icon">image_video_icon</string>
+    <string name="image_msg_icon">image_msg_icon</string>
+    <string name="mobile">Mobile</string>
+    <string name="personal">personal</string>
+    <string name="email">aaailori@gmail.com</string>
+    <string name="image_email_icon">image_email_icon</string>
+    <string name="_3dots">3dots</string>
+    <string name="back">back</string>
+    <string name="star">star</string>
+</resources>
