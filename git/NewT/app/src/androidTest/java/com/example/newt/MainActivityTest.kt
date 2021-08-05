@@ -20,41 +20,64 @@ import com.example.testing.R
 @RunWith(AndroidJUnit4::class)
 class MainActivityTest{
 
+    //Instance of valid Input
     var nameToPass = "Ayomide"
     var userNameToPass = "hayyohmyde"
     var emailToPass = "ayomide.ilori@gmail.com"
     var mobileToPass = "08034107426"
+    var genderToPass = "male"
     var passwordToPass = "qwerty@86"
     var confirmedPasswordToPass = "qwerty@86"
 
 
+    //Instance of invalid Input
+    var invalidNameToPass = "Ayomide"
+    var invalidUserNameToPass = "hay"
+    var invalidEmailToPass = "ayomide.ilori@gmailcom"
+    var invalidMobileToPass = "0807426"
+    var invalidGenderToPass = "ale"
+    var invalidPasswordToPass = "qwert86"
+    var invalidConfirmedPasswordToPass = "qwert86"
+
     @get:Rule
     val activityRule = ActivityScenarioRule(MainActivity::class.java)
 
+
+    //Valid Input User Interface Test
    @Test
    fun registrationTest(){
-       onView(withId(R.id.name))
-           .perform(typeText(nameToPass), closeSoftKeyboard())
-
-       //usercheck
-       onView(withId(R.id.userName))
-           .perform(typeText(userNameToPass), closeSoftKeyboard())
-
-       //email
-//       onView(withId(R.id.Email))
-//           .perform(typeText(emailToPass), closeSoftKeyboard())
-
-       //testing mobile
-       onView(withId(R.id.mobile))
-           .perform(typeText(mobileToPass), closeSoftKeyboard())
-
-       //testing password
-       onView(withId(R.id.password))
-           .perform(typeText(confirmedPasswordToPass), closeSoftKeyboard())
-
-       //Register button Clicked
-
-        onView(withId(R.id.register)).perform(click())
+       onView(withId(R.id.name)).perform(typeText(nameToPass), closeSoftKeyboard())
+       onView(withId(R.id.userName)).perform(typeText(userNameToPass), closeSoftKeyboard())
+       onView(withId(R.id.Email)).perform(typeText(emailToPass), closeSoftKeyboard())
+       onView(withId(R.id.mobile)).perform(typeText(mobileToPass), closeSoftKeyboard())
+       onView(withId(R.id.password)).perform(typeText(passwordToPass), closeSoftKeyboard())
+       onView(withId(R.id.confirmedPassword)).perform(typeText(confirmedPasswordToPass), closeSoftKeyboard())
+       onView(withId(R.id.register)).perform(click())
    }
+
+
+    //Valid Input User Interface Test
+    @Test
+    fun invalidRegistrationTest(){
+        onView(withId(R.id.name)).perform(typeText(invalidNameToPass), closeSoftKeyboard())
+        onView(withId(R.id.userName)).perform(typeText(invalidUserNameToPass), closeSoftKeyboard())
+        onView(withId(R.id.Email)).perform(typeText(invalidEmailToPass), closeSoftKeyboard())
+        onView(withId(R.id.mobile)).perform(typeText(invalidMobileToPass), closeSoftKeyboard())
+        onView(withId(R.id.textGender)).check(matches(withText(genderToPass)))
+        onView(withId(R.id.password)).perform(typeText(invalidPasswordToPass), closeSoftKeyboard())
+        onView(withId(R.id.confirmedPassword)).perform(typeText(invalidConfirmedPasswordToPass), closeSoftKeyboard())
+        onView(withId(R.id.register)).perform(click())
+    }
+
+    //Testing User's displayed Input
+//    @Test
+//    fun displayedInputTest(){
+//        onView(withId(R.id.textName)).check(matches(withText(nameToPass)))
+//        onView(withId(R.id.textUserName)).check(matches(withText(userNameToPass)))
+//        onView(withId(R.id.textMobile)).check(matches(withText(mobileToPass)))
+//        onView(withId(R.id.textGender)).check(matches(withText(genderToPass)))
+//        onView(withId(R.id.register)).perform(click())
+//    }
+
 
 }
