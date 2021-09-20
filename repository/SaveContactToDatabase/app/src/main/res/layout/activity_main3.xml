@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity3">
+
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="20dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/white"
+        android:padding="5dp"
+        android:text="@string/bsis_contact_app"
+        android:textAlignment="center"
+        android:textColor="#050505"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageBackButton"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_margin="2dp"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="@id/textViewTitle"
+        app:layout_constraintTop_toTopOf="@id/textViewTitle"
+        tools:layout_editor_absoluteX="17dp"
+        android:background="@color/white"
+        tools:layout_editor_absoluteY="19dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="00dp"
+        android:layout_margin="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_LastName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <EditText
+                    android:id="@+id/editText_LastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:textColor="@color/purple_500"
+                    android:textSize="20sp"
+                    android:textColorHint="@color/black"
+                    android:background="@color/white"
+                    android:autofillHints="last name"
+                    android:hint="@string/last_name"
+                    android:inputType="textPersonName"
+                    android:text="" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_FirstName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardview_LastName">
+                <EditText
+                    android:id="@+id/editText_FirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:hint="@string/first_name"
+                    android:textColor="@color/purple_500"
+                    android:textSize="20sp"
+                    android:textColorHint="@color/black"
+                    android:background="@color/white"
+                    android:autofillHints="first name"
+                    android:inputType="text"
+                    android:text="" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_Mobile"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardview_FirstName">
+                <EditText
+                    android:id="@+id/editText_Mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:autofillHints="mobile"
+                    android:hint="@string/mobile"
+                    android:textColor="@color/purple_500"
+                    android:textSize="20sp"
+                    android:textColorHint="@color/black"
+                    android:inputType="phone"
+                    android:background="@color/white"
+                    android:text="" />
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_Email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="10dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardview_Mobile">
+                <EditText
+                    android:id="@+id/editText_Email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:hint="@string/email"
+                    android:textColor="@color/purple_500"
+                    android:textSize="20sp"
+                    android:textColorHint="@color/black"
+                    android:background="@color/white"
+                    android:autofillHints="email Address"
+                    android:inputType="textEmailAddress"
+                    android:text="" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_SaveButton"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="40dp"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardview_Email"
+                tools:layout_editor_absoluteY="339dp">
+
+                <Button
+                    android:id="@+id/saveContactBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/save_contact"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:background="@color/white"
+                    app:cardCornerRadius="30dp" />
+            </androidx.cardview.widget.CardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
